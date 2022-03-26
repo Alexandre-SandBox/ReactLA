@@ -1,12 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import Home from './pages/Home.jxs';
+import Demoniste from './pages/Demoniste';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Router>
+      <Route  path="/">
+        <Home />
+      </Route>
+      <Route path="/class/demoniste">
+        <Demoniste> </Demoniste>
+      </Route>
+    </Router>
   </React.StrictMode>,
   document.getElementById('root')
 );
