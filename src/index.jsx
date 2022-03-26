@@ -4,16 +4,18 @@ import './index.css';
 import Home from './pages/Home';
 import Demoniste from './pages/Demoniste';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import Header from "./components/Header";
+import Error from "./components/Error";
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 
 ReactDOM.render(
   <React.StrictMode>
     <Router>
+    <Header />
       <Routes>
-        <Route exact path="/" element={<Home />} >
-        </Route>
-        <Route path="/class/demoniste" element={<Demoniste />}>
-        </Route>
+        <Route exact path="/" element={<Home />} />
+        <Route path="/class/:classChoice" element={<Demoniste />} />
+        <Route path='*' element={<Error />}/>
       </Routes>
     </Router>
   </React.StrictMode>,
