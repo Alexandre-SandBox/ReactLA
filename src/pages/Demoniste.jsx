@@ -2,12 +2,13 @@ import { useParams } from 'react-router-dom'
 import styled from 'styled-components'
 
 const CardLabel = styled.span``
+const Test = styled.span``
 function Demoniste() {
     const { classChoice } = useParams()
     console.log(classChoice);
     return (
         <div>
-            <h1>Questionnaire 🧮</h1>
+            <Test>Questionnaire 🧮</Test>
             <CardLabel>{ classChoice }</CardLabel>
         </div>
     )
