@@ -1,20 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Home from './pages/Home.jxs';
+import Home from './pages/Home';
 import Demoniste from './pages/Demoniste';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 
 ReactDOM.render(
   <React.StrictMode>
     <Router>
-      <Route exact path="/">
-        <Home />
-      </Route>
-      <Route path="/class/demoniste">
-        <Demoniste> </Demoniste>
-      </Route>
+      <Routes>
+        <Route exact path="/" element={<Home />} >
+        </Route>
+        <Route path="/class/demoniste" element={<Demoniste />}>
+        </Route>
+      </Routes>
     </Router>
   </React.StrictMode>,
   document.getElementById('root')
